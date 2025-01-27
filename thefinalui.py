@@ -14,7 +14,7 @@ from thefinal import (
     append_to_existing_customer_row,
     append_new_customer_row,
 )
-laptop_data = pd.read_csv("laptop_dataset_updated.csv")  # Path to the dataset
+laptop_data = pd.read_csv("C:\\Users\\choud\\Downloads\\laptop_dataset_updated.csv")  # Path to the dataset
 laptop_data = laptop_data.apply(lambda x: x.str.lower() if x.dtype == "object" else x)
 # Helper functions
 def extract_bigrams_from_text(text):
@@ -100,7 +100,7 @@ def main():
 
     credentials_path = "credentials2.json"
     spreadsheet_id = "1BQRX513_GAiLKokObbJoA30foTKzLC_BFS48LD5MMTM"
-    customer_history_path = "dataset_preparation - Sheet1.csv"
+    customer_history_path = "C:\\Users\\choud\\Downloads\\dataset_preparation - Sheet1.csv"
 
     sheet = initialize_google_sheets(credentials_path, spreadsheet_id)
     customer_history = pd.read_csv(customer_history_path)
